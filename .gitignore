@@ -1,0 +1,49 @@
+# 🔹 Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 🔹 Virtual environment
+venv/
+.env/
+.venv/
+
+# 🔹 Environment variables
+.env
+.env.*
+
+# 🔹 Flask
+instance/
+.webassets-cache
+
+# 🔹 Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 🔹 Logs
+*.log
+
+# 🔹 VS Code
+.vscode/
+
+# 🔹 OS files
+.DS_Store
+Thumbs.db
+
+# 🔹 Docker
+*.tar
+
+# 🔹 Kubernetes 
+*.yaml.bak
+
+# 🔹 Build / dist
+build/
+dist/
+*.egg-info/
+
+# 🔹 IDE
+.idea/
+
+# 🔹 Misc
+*.swp
