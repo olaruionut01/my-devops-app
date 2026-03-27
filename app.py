@@ -12,7 +12,7 @@ def health():
     })
 
 
-@app.route("/")
+@app.route("/hello")
 def hello():
     return jsonify({
         "message": "Hello from my DevOps app!"
