@@ -7,8 +7,8 @@ app = Flask(__name__)
 metrics = PrometheusMetrics(app)
 
 LOG_LEVEL = os.environ.get("LOG_LEVEL", "info")
-APP_ENV   = os.environ.get("APP_ENV", "development")
-API_KEY   = os.environ.get("API_KEY", "")
+APP_ENV = os.environ.get("APP_ENV", "development")
+API_KEY = os.environ.get("API_KEY", "")
 
 
 @app.route("/health")
