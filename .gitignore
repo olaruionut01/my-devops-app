@@ -37,6 +37,8 @@ Thumbs.db
 # 🔹 Kubernetes 
 *.yaml.bak
 
+secret.yaml
+
 # 🔹 Build / dist
 build/
 dist/

@@ -20,6 +20,11 @@ spec:
           imagePullPolicy: Never
           ports:
             - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: my-devops-app-config
+            - secretRef:
+                name: my-devops-app-secret
           readinessProbe:
             httpGet:
               path: /health

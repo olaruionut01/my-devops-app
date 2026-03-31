@@ -15,6 +15,7 @@ API_KEY = os.environ.get("API_KEY", "")
 def health():
     return jsonify({
         "status": "ok",
+        "env": APP_ENV,
         "timestamp": datetime.datetime.utcnow().isoformat()
     })
 
@@ -22,7 +23,8 @@ def health():
 @app.route("/hello")
 def hello():
     return jsonify({
-        "message": "Hello from my DevOps app!"
+        "message": "Hello from my DevOps app!",
+        "log_level": LOG_LEVEL
     })
 
 
