@@ -6,6 +6,11 @@ metadata:
     app: my-devops-app
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: my-devops-app
@@ -16,8 +21,8 @@ spec:
     spec:
       containers:
         - name: my-devops-app
-          image: my-devops-app
-          imagePullPolicy: Never
+          image: localhost:5050/my-devops-app:v3
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
           envFrom:

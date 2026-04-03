@@ -5,3 +5,7 @@ metadata:
 data:
   LOG_LEVEL: "info"
   APP_ENV: "production"
+  DB_HOST: "postgres-postgresql"
+  DB_PORT: "5432"
+  DB_NAME: "appdb"
+  DB_USER: "appuser"

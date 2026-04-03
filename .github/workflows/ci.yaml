@@ -37,7 +37,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t my-devops-app:${{ github.sha }} .
+        run: |
+          docker build \
+            -t localhost:5050/my-devops-app:${{ github.sha }} \
+            -t localhost:5050/my-devops-app:latest \
+            .
 
       - name: Verify image exists
         run: docker images | grep my-devops-app
