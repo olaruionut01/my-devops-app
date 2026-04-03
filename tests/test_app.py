@@ -1,7 +1,7 @@
 import pytest
 import os
-os.environ["DB_HOST"] = "nonexistent"   
-from app import app
+os.environ["DB_HOST"] = "nonexistent"
+from app import app   # noqa: E402
 
 
 @pytest.fixture
