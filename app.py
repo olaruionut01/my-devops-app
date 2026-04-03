@@ -35,8 +35,9 @@ class Item(db.Model):
 
 
 # Create tables on startup
-with app.app_context():
-    db.create_all()
+if not app.config.get("TESTING"):
+    with app.app_context():
+        db.create_all()
 
 
 @app.route("/health")

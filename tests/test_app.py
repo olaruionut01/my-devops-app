@@ -1,4 +1,6 @@
 import pytest
+import os
+os.environ["DB_HOST"] = "nonexistent"   
 from app import app
 
 
