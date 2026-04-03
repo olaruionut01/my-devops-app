@@ -1,5 +1,6 @@
 import pytest
 import os
+os.environ["TESTING"] = "1"
 os.environ["DB_HOST"] = "nonexistent"
 from app import app   # noqa: E402
 

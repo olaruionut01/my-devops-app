@@ -34,8 +34,7 @@ class Item(db.Model):
         return {"id": self.id, "name": self.name}
 
 
-# Create tables on startup
-if not app.config.get("TESTING"):
+if os.environ.get("TESTING") != "1":
     with app.app_context():
         db.create_all()
 
